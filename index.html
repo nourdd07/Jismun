@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home - JISMUN</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .background {
+      background-image: url('https://i.imgur.com/2BoM6eo.png');
+    }
+  </style>
+</head>
+<body>
+  <div class="background">
+    <div class="top-bar">
+      <!-- Apply Now Button -->
+      <button class="button" onclick="window.location.href='role-selection.html'">Apply Now</button>
+      <!-- Timer -->
+      <div id="timer"></div>
+    </div>
+    <!-- Navigation Bar -->
+    <div class="nav-bar">
+      <button class="button" onclick="window.location.href='index.html'">Home</button>
+      <button class="button" onclick="window.location.href='about.html'">About</button>
+      <button class="button" onclick="window.location.href='schedule.html'">Schedule</button>
+      <button class="button" onclick="window.location.href='committees.html'">Committees</button>
+      <button class="button" onclick="window.location.href='mailto:jismun25@gmail.com'">Contact Us</button>
+    </div>
+  </div>
+  <!-- Footer -->
+  <footer>
+    &copy; 2023 JISMUN. All rights reserved.
+  </footer>
+  <script src="scripts.js"></script>
+  <script>
+    // Timer Script
+    const countDownDate = new Date("May 16, 2024 00:00:00").getTime();
+
+    const timer = setInterval(() => {
+      const now = new Date().getTime();
+      const distance = countDownDate - now;
+
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      document.getElementById("timer").innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+
+      if (distance < 0) {
+        clearInterval(timer);
+        document.getElementById("timer").innerHTML = "EXPIRED";
+      }
+    }, 1000);
+  </script>
+</body>
+</html>
