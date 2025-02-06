@@ -3,115 +3,93 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Home - JISMUN</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  <title>About - JISMUN</title>
   <link rel="stylesheet" href="styles.css">
   <style>
     .background {
-      background-image: url('https://i.imgur.com/2BoM6eo.png');
-    }
-
-    /* Top Bar (Timer and Apply Now Button) */
-    .top-bar {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      width: 90%;
-      max-width: 1200px;
-      margin-top: 20px;
-    }
-
-    /* Timer Styles */
-    #timer {
-      font-size: 2rem;
-      font-weight: bold;
-    }
-
-    /* Apply Now Button */
-    .apply-button {
-      background: none;
-      border: 2px solid #514236;
-      color: #514236;
-      padding: 10px 20px;
-      font-size: 1.2rem;
-      font-family: 'Playfair Display', serif;
-      cursor: pointer;
-      transition: background 0.3s, color 0.3s;
-    }
-
-    .apply-button:hover {
-      background: #514236;
-      color: white;
-    }
-
-    /* Navigation Bar */
-    .nav-bar {
-      margin-top: 20px;
+      background-image: url('https://i.imgur.com/nfB895T.jpg');
       display: flex;
       flex-direction: column;
-      gap: 10px;
-      align-items: flex-start; /* Align buttons to the left */
+      align-items: center;
+      justify-content: center;
+      color: #514236;
+      padding: 20px;
+      text-align: center;
     }
 
-    .nav-button {
+    .about-content {
+      max-width: 800px;
+      background: rgba(255, 255, 255, 0.8);
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    .about-content h1 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+
+    .about-content p {
+      font-size: 1.2rem;
+      line-height: 1.6;
+    }
+
+    #timer {
+      font-size: 3rem; /* Bigger timer */
+      font-weight: bold;
+      color: #514236;
+      margin-bottom: 20px; /* Space between timer and nav bar */
+    }
+
+    .nav-bar {
+      display: flex;
+      flex-direction: column;
+      gap: 15px; /* Bigger gap between buttons */
+      margin-top: 20px;
+    }
+
+    .button {
       background: none;
       border: 2px solid #514236;
       color: #514236;
-      padding: 10px 20px;
-      font-size: 1rem;
+      padding: 15px 30px; /* Bigger buttons */
+      font-size: 1.5rem; /* Bigger text */
       font-family: 'Playfair Display', serif;
       cursor: pointer;
       transition: background 0.3s, color 0.3s;
     }
 
-    .nav-button:hover {
+    .button:hover {
       background: #514236;
       color: white;
+    }
+
+    .apply-now {
+      margin-top: 40px;
+    }
+
+    .apply-now .button {
+      font-size: 1.8rem; /* Bigger text for Apply Now button */
+      padding: 20px 40px; /* Bigger button */
     }
   </style>
 </head>
 <body>
   <div class="background">
-    <div class="top-bar">
-      <!-- Apply Now Button -->
-      <button class="apply-button" onclick="window.location.href='role-selection.html'">Apply Now</button>
-      <!-- Timer -->
-      <div id="timer"></div>
-    </div>
-    <!-- Navigation Bar -->
+    <div id="timer">00:00:00</div>
     <div class="nav-bar">
-      <button class="nav-button" onclick="window.location.href='index.html'">Home</button>
-      <button class="nav-button" onclick="window.location.href='about.html'">About</button>
-      <button class="nav-button" onclick="window.location.href='schedule.html'">Schedule</button>
-      <button class="nav-button" onclick="window.location.href='committees.html'">Committees</button>
-      <button class="nav-button" onclick="window.location.href='mailto:jismun25@gmail.com'">Contact Us</button>
+      <a href="committees.html" class="button">Committees</a>
+      <a href="role-selection.html" class="button">Role Selection</a>
+    </div>
+    <div class="apply-now">
+      <a href="apply.html" class="button">Apply Now</a>
+    </div>
+    <div class="about-content">
+      <h1>About Our MUN</h1>
+      <p>
+        Model United Nations (MUN) is an academic simulation of the United Nations, where students step into the roles of diplomats to debate global issues, draft resolutions, and negotiate solutions to pressing international challenges. Our MUN conference provides a platform for participants to develop public speaking, negotiation, and leadership skills while fostering an understanding of international relations and diplomacy. With a diverse range of committees, from crisis simulations to specialized UN bodies, delegates will engage in thought-provoking discussions, tackle real-world problems, and collaborate to create meaningful resolutions. Whether you are a seasoned MUN participant or a first-time delegate, our conference promises an immersive, intellectually stimulating, and dynamic experience that prepares you for the world of global governance and diplomacy.
+      </p>
     </div>
   </div>
-  <!-- Footer -->
-  <footer>
-    &copy; 2025 JISMUN. All rights reserved.
-  </footer>
-  <script src="scripts.js"></script>
-  <script>
-    // Timer Script
-    const countDownDate = new Date("May 16, 2025 00:00:00").getTime();
-
-    const timer = setInterval(() => {
-      const now = new Date().getTime();
-      const distance = countDownDate - now;
-
-      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-      document.getElementById("timer").innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
-
-      if (distance < 0) {
-        clearInterval(timer);
-        document.getElementById("timer").innerHTML = "EXPIRED";
-      }
-    }, 1000);
-  </script>
 </body>
 </html>
