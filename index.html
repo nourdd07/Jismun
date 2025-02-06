@@ -29,12 +29,11 @@
 
     /* Apply Now Button */
     .apply-button {
-      background: url('https://i.imgur.com/nfB895T.jpg');
-      background-size: cover;
+      background: none;
       border: 2px solid #514236;
       color: #514236;
-      padding: 15px 30px; /* Increased size */
-      font-size: 1.5rem; /* Increased size */
+      padding: 10px 20px;
+      font-size: 1.2rem;
       font-family: 'Playfair Display', serif;
       cursor: pointer;
       transition: background 0.3s, color 0.3s;
@@ -47,20 +46,19 @@
 
     /* Navigation Bar */
     .nav-bar {
-      position: absolute;
-      top: 20px;
-      right: 20px;
+      margin-top: 20px;
       display: flex;
-      gap: 15px; /* Increased gap */
+      flex-direction: column;
+      gap: 10px;
+      align-items: flex-start; /* Align buttons to the left */
     }
 
     .nav-button {
-      background: url('https://i.imgur.com/nfB895T.jpg');
-      background-size: cover;
+      background: none;
       border: 2px solid #514236;
       color: #514236;
       padding: 10px 20px;
-      font-size: 1.2rem; /* Increased size */
+      font-size: 1rem;
       font-family: 'Playfair Display', serif;
       cursor: pointer;
       transition: background 0.3s, color 0.3s;
@@ -74,6 +72,12 @@
 </head>
 <body>
   <div class="background">
+    <div class="top-bar">
+      <!-- Apply Now Button -->
+      <button class="apply-button" onclick="window.location.href='role-selection.html'">Apply Now</button>
+      <!-- Timer -->
+      <div id="timer"></div>
+    </div>
     <!-- Navigation Bar -->
     <div class="nav-bar">
       <button class="nav-button" onclick="window.location.href='index.html'">Home</button>
@@ -81,12 +85,6 @@
       <button class="nav-button" onclick="window.location.href='schedule.html'">Schedule</button>
       <button class="nav-button" onclick="window.location.href='committees.html'">Committees</button>
       <button class="nav-button" onclick="window.location.href='mailto:jismun25@gmail.com'">Contact Us</button>
-    </div>
-    <div class="top-bar">
-      <!-- Apply Now Button -->
-      <button class="apply-button" onclick="window.location.href='role-selection.html'">Apply Now</button>
-      <!-- Timer -->
-      <div id="timer"></div>
     </div>
   </div>
   <!-- Footer -->
