@@ -21,7 +21,7 @@ body, html {
 
 /* Timer Styles */
 #timer {
-  font-size: 3rem; /* Bigger timer */
+  font-size: 6rem; /* Bigger timer */
   font-weight: bold;
   color: #514236;
   margin-bottom: 20px; /* Space between timer and nav bar */
