@@ -94,7 +94,7 @@
   <script src="scripts.js"></script>
   <script>
     // Timer Script
-    const countDownDate = new Date("May 16, 2025 00:00:00").getTime();
+    const countDownDate = new Date("May 17, 2025 00:00:00").getTime();
 
     const timer = setInterval(() => {
       const now = new Date().getTime();
@@ -109,7 +109,7 @@
 
       if (distance < 0) {
         clearInterval(timer);
-        document.getElementById("timer").innerHTML = "EXPIRED";
+        document.getElementById("timer").innerHTML = "EVENT STARTED";
       }
     }, 1000);
   </script>
