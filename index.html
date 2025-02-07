@@ -38,9 +38,9 @@
     }
 
     .nav-button {
-      background: none;
+      background: #514236; /* Solid background color */
       border: 2px solid #514236;
-      color: #514236;
+      color: white; /* White text */
       padding: 15px 30px; /* Bigger buttons */
       font-size: 1.5rem; /* Bigger text */
       font-family: 'Playfair Display', serif;
@@ -49,16 +49,24 @@
     }
 
     .nav-button:hover {
-      background: #514236;
-      color: white;
+      background: white; /* White background on hover */
+      color: #514236; /* Dark text on hover */
     }
 
     /* Responsive Styles */
     @media (max-width: 768px) {
+      .background {
+        background-size: contain; /* Make background image fit properly */
+        background-repeat: no-repeat;
+        background-position: top center;
+        padding-top: 5vh; /* Adjust padding for mobile */
+      }
+
       #timer {
         font-size: 2.5rem; /* Smaller timer for mobile */
         margin-left: 20px; /* Move timer to the left */
         align-self: flex-start; /* Align timer to the left */
+        margin-top: 20px; /* Add space above the timer */
       }
 
       .nav-bar {
@@ -110,7 +118,7 @@
       const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
       const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-      document.getElementById("timer").innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+      document.getElementById("timer").innerHTML = ${days}d ${hours}h ${minutes}m ${seconds}s;
 
       if (distance < 0) {
         clearInterval(timer);
