@@ -9,22 +9,27 @@
   <style>
     .background {
       background-image: url('https://i.imgur.com/2BoM6eo.png');
+      background-size: cover;
+      background-position: center;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center; /* Center content vertically */
+      position: relative; /* For absolute positioning of nav bar */
     }
 
-    /* Top Bar (Timer and Apply Now Button) */
-    .top-bar {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      width: 90%;
-      max-width: 1200px;
-      margin-top: 20px;
+    /* Timer Container */
+    .timer-container {
+      text-align: center; /* Center text horizontally */
     }
 
     /* Timer Styles */
     #timer {
-      font-size: 2rem;
+      font-size: 6rem; /* Bigger timer */
       font-weight: bold;
+      color: #514236;
+      margin-bottom: 20px; /* Space between timer and Apply Now button */
     }
 
     /* Apply Now Button */
@@ -32,8 +37,8 @@
       background: none;
       border: 2px solid #514236;
       color: #514236;
-      padding: 10px 20px;
-      font-size: 1.2rem;
+      padding: 15px 30px; /* Bigger buttons */
+      font-size: 1.5rem; /* Bigger text */
       font-family: 'Playfair Display', serif;
       cursor: pointer;
       transition: background 0.3s, color 0.3s;
@@ -46,11 +51,11 @@
 
     /* Navigation Bar */
     .nav-bar {
-      margin-top: 20px;
+      position: absolute;
+      top: 20px;
+      right: 20px;
       display: flex;
-      flex-direction: column;
-      gap: 10px;
-      align-items: flex-start; /* Align buttons to the left */
+      gap: 15px; /* Bigger gap between buttons */
     }
 
     .nav-button {
@@ -58,7 +63,7 @@
       border: 2px solid #514236;
       color: #514236;
       padding: 10px 20px;
-      font-size: 1rem;
+      font-size: 1.2rem;
       font-family: 'Playfair Display', serif;
       cursor: pointer;
       transition: background 0.3s, color 0.3s;
@@ -72,12 +77,6 @@
 </head>
 <body>
   <div class="background">
-    <div class="top-bar">
-      <!-- Apply Now Button -->
-      <button class="apply-button" onclick="window.location.href='role-selection.html'">Apply Now</button>
-      <!-- Timer -->
-      <div id="timer"></div>
-    </div>
     <!-- Navigation Bar -->
     <div class="nav-bar">
       <button class="nav-button" onclick="window.location.href='index.html'">Home</button>
@@ -86,11 +85,19 @@
       <button class="nav-button" onclick="window.location.href='committees.html'">Committees</button>
       <button class="nav-button" onclick="window.location.href='mailto:jismun25@gmail.com'">Contact Us</button>
     </div>
+
+    <!-- Timer and Apply Now Button -->
+    <div class="timer-container">
+      <div id="timer"></div>
+      <button class="apply-button" onclick="window.location.href='role-selection.html'">Apply Now</button>
+    </div>
   </div>
+
   <!-- Footer -->
   <footer>
     &copy; 2025 JISMUN. All rights reserved.
   </footer>
+
   <script src="scripts.js"></script>
   <script>
     // Timer Script
