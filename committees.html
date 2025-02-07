@@ -8,7 +8,10 @@
   <link rel="stylesheet" href="styles.css">
   <style>
     .background {
-      background-image: url('https://i.imgur.com/glTdihd.jpg');
+      background-image: url('https://i.imgur.com/glTdihd.jpg'); /* New background image */
+      background-size: cover;
+      background-position: center;
+      height: 100vh;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -17,30 +20,30 @@
     }
 
     .committee-button {
-      background: none;
+      background: #514236; /* Solid background color */
       border: 2px solid #514236;
-      color: #514236;
-      padding: 15px 30px; /* Bigger buttons */
+      color: white; /* White text */
+      padding: 20px 40px; /* Bigger buttons */
       font-size: 1.5rem; /* Bigger text */
       font-family: 'Playfair Display', serif;
       cursor: pointer;
       transition: background 0.3s, color 0.3s;
-      margin: 10px;
+      margin: 15px; /* Increased margin */
       width: 80%; /* Wider buttons */
       max-width: 400px; /* Limit button width */
       text-align: center;
     }
 
     .committee-button:hover {
-      background: #514236;
-      color: white;
+      background: white; /* White background on hover */
+      color: #514236; /* Dark text on hover */
     }
 
     /* Responsive Styles */
     @media (max-width: 768px) {
       .committee-button {
         font-size: 1.2rem; /* Smaller buttons for mobile */
-        padding: 10px 20px;
+        padding: 15px 30px;
       }
     }
   </style>
