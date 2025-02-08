@@ -20,7 +20,7 @@
     .background {
       background-image: url('https://i.imgur.com/2BoM6eo.png');
       background-size: cover;
-      background-position: center;
+      background-position: center; /* Center the background image */
       height: 100vh;
       display: flex;
       flex-direction: column;
@@ -52,8 +52,8 @@
       background: #514236; /* Fill buttons with #514236 */
       border: 2px solid #514236;
       color: white; /* White text */
-      padding: 10px 20px; /* Smaller buttons */
-      font-size: 1.2rem; /* Smaller text */
+      padding: 8px 16px; /* Smaller padding */
+      font-size: 1rem; /* Smaller text */
       font-family: 'Playfair Display', serif;
       cursor: pointer;
       transition: background 0.3s, color 0.3s;
@@ -68,7 +68,7 @@
     @media (max-width: 768px) {
       .background {
         background-size: cover; /* Ensure the background image covers the screen */
-        background-position: top; /* Align the image to the top */
+        background-position: center; /* Center the background image */
         padding-top: 15vh; /* Adjust padding for mobile */
       }
 
@@ -84,17 +84,17 @@
         position: static; /* Remove absolute positioning */
         flex-direction: row; /* Keep buttons horizontal */
         justify-content: center; /* Center buttons horizontally */
-        gap: 8px; /* Smaller gap between buttons */
+        gap: 6px; /* Smaller gap between buttons */
         margin-top: 20px; /* Space above the navigation bar */
         width: 100%; /* Full width */
         padding: 0 10px; /* Add padding for better spacing */
       }
 
       .nav-button {
-        font-size: 1rem; /* Smaller buttons for mobile */
-        padding: 8px 16px; /* Smaller padding */
+        font-size: 0.9rem; /* Smaller buttons for mobile */
+        padding: 6px 12px; /* Smaller padding */
         flex: 1; /* Allow buttons to grow and fit the screen */
-        max-width: 120px; /* Limit button width */
+        max-width: 100px; /* Limit button width */
         text-align: center; /* Center button text */
       }
     }
