@@ -7,6 +7,16 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <style>
+    /* General Styles */
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: 'Playfair Display', serif;
+      color: #514236;
+    }
+
+    /* Background Image */
     .background {
       background-image: url('https://i.imgur.com/2BoM6eo.png');
       background-size: cover;
@@ -57,37 +67,41 @@
     /* Responsive Styles */
     @media (max-width: 768px) {
       .background {
-        background-size: contain; /* Adjust background image for smaller screens */
-        background-repeat: no-repeat;
+        background-size: cover; /* Ensure the background image covers the screen */
+        background-position: top; /* Align the image to the top */
+        padding-top: 15vh; /* Adjust padding for mobile */
       }
 
       #timer {
-        font-size: 2.5rem; /* Smaller timer for mobile */
-        margin-left: 20px; /* Move timer to the left */
-        align-self: flex-start; /* Align timer to the left */
+        font-size: 3rem; /* Smaller timer for mobile */
+        margin-top: 60px; /* Space for the navigation bar */
+        margin-bottom: 10px; /* Reduce space below timer */
+        text-align: center; /* Center timer text */
         width: 100%; /* Ensure timer takes full width */
-        text-align: left; /* Align timer text to the left */
       }
 
       .nav-bar {
-        flex-direction: column; /* Stack buttons vertically on mobile */
+        position: static; /* Remove absolute positioning */
+        flex-direction: row; /* Keep buttons horizontal */
+        justify-content: center; /* Center buttons horizontally */
         gap: 8px; /* Smaller gap between buttons */
-        top: 10px;
-        right: 10px;
+        margin-top: 20px; /* Space above the navigation bar */
+        width: 100%; /* Full width */
+        padding: 0 10px; /* Add padding for better spacing */
       }
 
       .nav-button {
         font-size: 1rem; /* Smaller buttons for mobile */
         padding: 8px 16px; /* Smaller padding */
+        flex: 1; /* Allow buttons to grow and fit the screen */
+        max-width: 120px; /* Limit button width */
+        text-align: center; /* Center button text */
       }
     }
   </style>
 </head>
 <body>
   <div class="background">
-    <!-- Timer -->
-    <div id="timer"></div>
-
     <!-- Navigation Bar -->
     <div class="nav-bar">
       <button class="nav-button" onclick="window.location.href='index.html'">Home</button>
@@ -97,6 +111,9 @@
       <button class="nav-button" onclick="window.location.href='role-selection.html'">Apply Now</button>
       <button class="nav-button" onclick="window.location.href='mailto:jismun25@gmail.com'">Contact Us</button>
     </div>
+
+    <!-- Timer -->
+    <div id="timer"></div>
   </div>
 
   <!-- Footer -->
