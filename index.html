@@ -64,17 +64,17 @@
       color: #514236; /* Dark text on hover */
     }
 
-    /* Responsive Styles */
+    /* Responsive Styles (Mobile Only) */
     @media (max-width: 768px) {
       .background {
-        background-size: cover; /* Ensure the background image covers the screen */
+        background-size: 120%; /* Zoom out the image slightly */
         background-position: center; /* Center the background image */
-        padding-top: 15vh; /* Adjust padding for mobile */
+        padding-top: 15vh; /* Move timer and nav bar higher */
       }
 
       #timer {
         font-size: 3rem; /* Smaller timer for mobile */
-        margin-top: 60px; /* Space for the navigation bar */
+        margin-top: 50px; /* Space for the navigation bar */
         margin-bottom: 10px; /* Reduce space below timer */
         text-align: center; /* Center timer text */
         width: 100%; /* Ensure timer takes full width */
@@ -85,16 +85,16 @@
         flex-direction: row; /* Keep buttons horizontal */
         justify-content: center; /* Center buttons horizontally */
         gap: 6px; /* Smaller gap between buttons */
-        margin-top: 20px; /* Space above the navigation bar */
+        margin-top: 10px; /* Space above the navigation bar */
         width: 100%; /* Full width */
         padding: 0 10px; /* Add padding for better spacing */
       }
 
       .nav-button {
-        font-size: 0.9rem; /* Smaller buttons for mobile */
-        padding: 6px 12px; /* Smaller padding */
+        font-size: 0.8rem; /* Smaller buttons for mobile */
+        padding: 5px 10px; /* Smaller padding */
         flex: 1; /* Allow buttons to grow and fit the screen */
-        max-width: 100px; /* Limit button width */
+        max-width: 90px; /* Limit button width */
         text-align: center; /* Center button text */
       }
     }
