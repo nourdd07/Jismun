@@ -20,24 +20,23 @@
     .background {
       background-image: url('https://i.imgur.com/2BoM6eo.png');
       background-size: cover;
-      background-position: center center; /* Ensure only one image */
-      background-repeat: no-repeat; /* Prevent repeat */
+      background-position: center; /* Center the background image */
       height: 100vh;
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: flex-start;
-      padding-top: 10vh;
-      position: relative;
+      justify-content: flex-start; /* Move content higher */
+      padding-top: 10vh; /* Move timer higher */
+      position: relative; /* For absolute positioning of nav bar */
     }
 
     /* Timer Styles */
     #timer {
-      font-size: 6rem;
+      font-size: 6rem; /* Bigger timer */
       font-weight: bold;
       color: #514236;
-      margin-bottom: 20px;
-      text-align: center;
+      margin-bottom: 20px; /* Space between timer and Apply Now button */
+      text-align: center; /* Center text horizontally */
     }
 
     /* Navigation Bar */
@@ -46,60 +45,57 @@
       top: 20px;
       right: 20px;
       display: flex;
-      gap: 10px;
-      flex-wrap: wrap; /* Allow wrapping on small screens */
-      justify-content: center;
+      gap: 10px; /* Smaller gap between buttons */
     }
 
     .nav-button {
-      background: #514236;
+      background: #514236; /* Fill buttons with #514236 */
       border: 2px solid #514236;
-      color: white;
-      padding: 8px 16px;
-      font-size: 1rem;
-      font-family: 'Playfair Display', serif; /* Reverted the font change */
+      color: white; /* White text */
+      padding: 8px 16px; /* Smaller padding */
+      font-size: 1rem; /* Smaller text */
+      font-family: 'Playfair Display', serif;
       cursor: pointer;
       transition: background 0.3s, color 0.3s;
-      flex: 1 1 120px; /* Allow buttons to shrink and grow */
-      text-align: center;
-      margin: 5px;
     }
 
     .nav-button:hover {
-      background: white;
-      color: #514236;
+      background: white; /* White background on hover */
+      color: #514236; /* Dark text on hover */
     }
 
     /* Responsive Styles */
     @media (max-width: 768px) {
       .background {
-        background-size: 120%;
-        padding-top: 15vh;
+        background-size: cover; /* Ensure the background image covers the screen */
+        background-position: center; /* Center the background image */
+        padding-top: 15vh; /* Adjust padding for mobile */
       }
 
       #timer {
-        font-size: 3rem;
-        margin-top: 50px;
-        margin-bottom: 10px;
-        text-align: center;
-        width: 100%;
+        font-size: 3rem; /* Smaller timer for mobile */
+        margin-top: 60px; /* Space for the navigation bar */
+        margin-bottom: 10px; /* Reduce space below timer */
+        text-align: center; /* Center timer text */
+        width: 100%; /* Ensure timer takes full width */
       }
 
       .nav-bar {
-        position: static;
-        flex-direction: row;
-        justify-content: center;
-        gap: 6px;
-        margin-top: 10px;
-        padding: 0 10px;
-        width: 100%;
+        position: static; /* Remove absolute positioning */
+        flex-direction: row; /* Keep buttons horizontal */
+        justify-content: center; /* Center buttons horizontally */
+        gap: 6px; /* Smaller gap between buttons */
+        margin-top: 20px; /* Space above the navigation bar */
+        width: 100%; /* Full width */
+        padding: 0 10px; /* Add padding for better spacing */
       }
 
       .nav-button {
-        font-size: 0.8rem;
-        padding: 5px 10px;
-        max-width: 90px;
-        flex: 1 1 80px; /* Adjust button size on mobile */
+        font-size: 0.9rem; /* Smaller buttons for mobile */
+        padding: 6px 12px; /* Smaller padding */
+        flex: 1; /* Allow buttons to grow and fit the screen */
+        max-width: 100px; /* Limit button width */
+        text-align: center; /* Center button text */
       }
     }
   </style>
