@@ -65,8 +65,7 @@
       color: #514236;
     }
 
-    /* Responsive Styles (Mobile Only) */
-  @media (max-width: 768px) {
+@media (max-width: 768px) {
     .background {
         padding-top: 5vh; /* Moves everything higher */
     }
@@ -77,8 +76,18 @@
         right: 50%;
         transform: translateX(50%); /* Keeps navbar centered */
         display: flex; /* Ensures buttons stay in a row */
+        flex-wrap: nowrap; /* Prevents buttons from stacking vertically */
         gap: 5px; /* Keeps spacing consistent */
     }
+
+    #timer {
+        font-size: 2.5rem; /* Keep timer size perfect */
+        margin-top: 5px; /* Moves timer higher */
+        text-align: center; /* Keeps it centered */
+        white-space: nowrap; /* Ensures it stays in one line */
+    }
+}
+
 
     #timer {
         font-size: 2.5rem; /* Reduce size for better fit */
