@@ -66,29 +66,22 @@
     }
 
     /* Responsive Styles (Mobile Only) */
-    @media (max-width: 768px) {
-      .background {
-        padding-top: 5vh; /* Move timer and nav bar higher */
-      }
-
-      .nav-bar {
-        position: fixed; /* Keep navbar at the top */
-        top: 5px; /* Moves navbar higher */
-        left: 50%;
-        transform: translateX(-50%);
-        display: flex;
-        gap: 4px;
-        width: 100%;
-        justify-content: center;
-        padding: 5px 0;
-        background: rgba(255, 255, 255, 0.8);
-      }
-
-      #timer {
-        font-size: 3rem;
-        margin-top: 10px; /* Moves timer higher */
-      }
+   @media (max-width: 768px) {
+    .background {
+        padding-top: 5vh; /* Moves everything higher */
     }
+
+    .nav-bar {
+        position: absolute; /* Keep it positioned as before */
+        top: 5px; /* Moves navbar higher */
+        right: 20px;
+    }
+
+    #timer {
+        margin-top: 0; /* Moves timer higher */
+    }
+}
+
   </style>
 </head>
 <body>
