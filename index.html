@@ -65,43 +65,82 @@
       color: #514236;
     }
 
-@media (max-width: 768px) {
-    .background {
+    /* Mobile Menu Button */
+    .menu-btn {
+      display: none; /* Hidden by default */
+      font-size: 2rem;
+      background: #514236;
+      color: white;
+      border: none;
+      cursor: pointer;
+      padding: 5px 10px;
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      border-radius: 5px;
+    }
+
+    /* Mobile Styles */
+    @media (max-width: 768px) {
+      .background {
         padding-top: 5vh; /* Moves everything higher */
-    }
+      }
 
-    .nav-bar {
+      .nav-bar {
         position: absolute;
-        top: 5px; /* Moves navbar higher */
+        top: 5px;
         right: 50%;
-        transform: translateX(50%); /* Keeps navbar centered */
-        display: flex; /* Ensures buttons stay in a row */
-        flex-wrap: nowrap; /* Prevents buttons from stacking vertically */
-        gap: 5px; /* Keeps spacing consistent */
-    }
+        transform: translateX(50%);
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        background: #514236;
+        padding: 10px;
+        border-radius: 8px;
+        display: none; /* Hide by default */
+        width: 90%;
+        text-align: center;
+      }
 
-    #timer {
+      .nav-bar.show {
+        display: flex; /* Show navbar when toggled */
+      }
+
+      #timer {
         font-size: 2.5rem; /* Keep timer size perfect */
-        margin-top: 5px; /* Moves timer higher */
-        text-align: center; /* Keeps it centered */
+        margin-top: 5px;
+        text-align: center;
         white-space: nowrap; /* Ensures it stays in one line */
+      }
+
+      .nav-button {
+        background: none;
+        color: white;
+        border: 1px solid white;
+        padding: 8px;
+        margin: 5px 0;
+        font-size: 1rem;
+        width: 100%;
+        text-align: center;
+      }
+
+      .nav-button:hover {
+        background: white;
+        color: #514236;
+      }
+
+      /* Show menu button on small screens */
+      .menu-btn {
+        display: block;
+      }
     }
-}
-
-
-    #timer {
-        font-size: 2.5rem; /* Reduce size for better fit */
-        margin-top: 5px; /* Moves timer higher */
-        text-align: center; /* Keeps it centered */
-        white-space: nowrap; /* Ensures it stays in one line */
-    }
-}
-
-
   </style>
 </head>
 <body>
   <div class="background">
+    <!-- Menu Button (Hamburger) -->
+    <button class="menu-btn" onclick="toggleMenu()">☰</button>
+
     <!-- Navigation Bar -->
     <div class="nav-bar">
       <button class="nav-button" onclick="window.location.href='index.html'">Home</button>
@@ -142,7 +181,11 @@
         document.getElementById("timer").innerHTML = "EVENT STARTED";
       }
     }, 1000);
+
+    // Toggle the visibility of the navbar
+    function toggleMenu() {
+      document.querySelector(".nav-bar").classList.toggle("show");
+    }
   </script>
 </body>
 </html>
-
