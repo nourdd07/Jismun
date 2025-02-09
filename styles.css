@@ -75,3 +75,52 @@ footer {
     gap: 10px;
   }
 }
+@media (max-width: 768px) {
+    .nav-bar {
+        display: none; /* Hide navbar by default */
+        flex-direction: column;
+        position: absolute;
+        top: 50px; /* Moves it below the menu button */
+        left: 50%;
+        transform: translateX(-50%);
+        background: #514236; /* Dark background */
+        padding: 10px;
+        border-radius: 8px;
+        width: 90%;
+        text-align: center;
+    }
+
+    .nav-bar.show {
+        display: flex; /* Show navbar when toggled */
+    }
+
+    .nav-button {
+        background: none;
+        color: white; /* White text */
+        border: 1px solid white;
+        padding: 8px;
+        margin: 5px 0;
+        font-size: 1rem;
+        cursor: pointer;
+        width: 100%;
+    }
+
+    .nav-button:hover {
+        background: white;
+        color: #514236;
+    }
+
+    /* Menu button */
+    .menu-btn {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        background: #514236;
+        color: white;
+        border: none;
+        font-size: 2rem;
+        cursor: pointer;
+        padding: 5px 10px;
+        border-radius: 5px;
+    }
+}
