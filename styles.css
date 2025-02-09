@@ -2,125 +2,102 @@
 body, html {
   margin: 0;
   padding: 0;
+  height: 100%;
   font-family: 'Playfair Display', serif;
   color: #514236;
-  scroll-behavior: smooth;
 }
 
-/* Background Image Styles */
+/* Background Image */
 .background {
+  background-image: url('https://i.imgur.com/2BoM6eo.png');
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
   height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center; /* Center content vertically */
-  padding: 20px;
+  justify-content: flex-start;
+  padding-top: 10vh;
+  position: relative;
 }
 
 /* Timer Styles */
 #timer {
-  font-size: 6rem; /* Bigger timer */
+  font-size: 8rem;
   font-weight: bold;
   color: #514236;
-  margin-bottom: 20px; /* Space between timer and Apply Now button */
+  margin-bottom: 20px;
+  text-align: center;
 }
 
-/* Button Styles */
-.button {
-  background: none;
-  border: 2px solid #514236;
-  color: #514236;
-  padding: 15px 30px; /* Bigger buttons */
-  font-size: 1.5rem; /* Bigger text */
-  font-family: 'Playfair Display', serif;
+/* Hamburger Icon */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 30px;
+  height: 25px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.hamburger div {
+  width: 30px;
+  height: 5px;
+  background-color: #514236;
+  border-radius: 5px;
+}
+
+/* Navigation Bar */
+.nav-bar {
+  position: absolute;
+  top: 50px; /* Positioning right below the hamburger icon */
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: #514236;
+  padding: 20px;
+  border-radius: 8px;
+  width: 200px;
+  display: none; /* Hidden by default */
+}
+
+.nav-bar.show {
+  display: flex; /* Shows the menu when toggled */
+}
+
+.nav-button {
+  background: #514236;
+  color: white;
+  font-size: 1rem;
+  text-align: center;
+  padding: 10px;
+  border: none;
   cursor: pointer;
   transition: background 0.3s, color 0.3s;
 }
 
-.button:hover {
-  background: #514236;
-  color: white;
+.nav-button:hover {
+  background: white;
+  color: #514236;
 }
 
-/* Navigation Bar Styles */
-.nav-bar {
-  display: flex;
-  gap: 15px; /* Bigger gap between buttons */
-  margin-top: 20px;
-}
-
-/* Footer Styles */
-footer {
-  text-align: center;
-  padding: 10px;
-  background: rgba(0, 0, 0, 0.1);
-  margin-top: auto;
-}
-
-/* Responsive Styles */
+/* Responsive Styles (Mobile Only) */
 @media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+  }
+
   #timer {
-    font-size: 3rem; /* Smaller timer for mobile */
+    font-size: 2.5rem;
+    margin-top: 10px;
+    text-align: center;
   }
-
-  .button {
-    font-size: 1.2rem; /* Smaller buttons for mobile */
-    padding: 10px 20px;
-  }
-
-  .nav-bar {
-    flex-direction: column; /* Stack buttons vertically on mobile */
-    gap: 10px;
-  }
-}
-@media (max-width: 768px) {
-    .nav-bar {
-        display: none; /* Hide navbar by default */
-        flex-direction: column;
-        position: absolute;
-        top: 50px; /* Moves it below the menu button */
-        left: 50%;
-        transform: translateX(-50%);
-        background: #514236; /* Dark background */
-        padding: 10px;
-        border-radius: 8px;
-        width: 90%;
-        text-align: center;
-    }
-
-    .nav-bar.show {
-        display: flex; /* Show navbar when toggled */
-    }
-
-    .nav-button {
-        background: none;
-        color: white; /* White text */
-        border: 1px solid white;
-        padding: 8px;
-        margin: 5px 0;
-        font-size: 1rem;
-        cursor: pointer;
-        width: 100%;
-    }
-
-    .nav-button:hover {
-        background: white;
-        color: #514236;
-    }
-
-    /* Menu button */
-    .menu-btn {
-        position: absolute;
-        top: 10px;
-        left: 10px;
-        background: #514236;
-        color: white;
-        border: none;
-        font-size: 2rem;
-        cursor: pointer;
-        padding: 5px 10px;
-        border-radius: 5px;
-    }
 }
