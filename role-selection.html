@@ -7,49 +7,58 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <style>
-    .background {
-      background-image: url('https://i.imgur.com/IkyXlZc.jpg'); /* New background image */
-      background-size: cover;
-      background-position: center;
-      height: 100vh;
+    /* General Styles */
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: 'Playfair Display', serif;
+      color: #514236;
+      background-color: #3c0008; /* Background color */
+    }
+
+    /* Role Selection Container */
+    .role-selection {
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      color: #514236;
+      height: 100vh;
+      padding: 20px;
     }
 
+    /* Role Buttons */
     .role-button {
-      background: #514236; /* Solid background color */
+      background: none;
       border: 2px solid #514236;
-      color: white; /* White text */
-      padding: 20px 40px; /* Bigger buttons */
+      color: #514236;
+      padding: 15px 30px; /* Bigger buttons */
       font-size: 1.5rem; /* Bigger text */
       font-family: 'Playfair Display', serif;
       cursor: pointer;
       transition: background 0.3s, color 0.3s;
-      margin: 15px; /* Increased margin */
+      margin: 10px;
       width: 80%; /* Wider buttons */
       max-width: 400px; /* Limit button width */
       text-align: center;
     }
 
     .role-button:hover {
-      background: white; /* White background on hover */
-      color: #514236; /* Dark text on hover */
+      background: #514236;
+      color: white;
     }
 
     /* Responsive Styles */
     @media (max-width: 768px) {
       .role-button {
         font-size: 1.2rem; /* Smaller buttons for mobile */
-        padding: 15px 30px;
+        padding: 10px 20px;
       }
     }
   </style>
 </head>
 <body>
-  <div class="background">
+  <div class="role-selection">
     <h1>Choose Your Role</h1>
     <button class="role-button" onclick="window.location.href='https://docs.google.com/forms/d/e/1FAIpQLScfGPsy2CsLurN5i6CGCR27jjHIayjk-yPfNMIsga7dws12oQ/viewform?usp=dialog'">Delegate</button>
     <button class="role-button" onclick="window.location.href='https://docs.google.com/forms/d/e/1FAIpQLSfRBDhn9Fp5B8iaAW43Dfiema2PepctRNM8JkMBUtdptC-MCg/viewform?usp=sharing'">Delegation</button>
