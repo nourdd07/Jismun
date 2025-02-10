@@ -19,62 +19,67 @@ body, html {
   align-items: center;
   justify-content: flex-start;
   padding-top: 10vh;
-  position: relative;
+  position: relative; /* Important to position elements inside */
 }
 
 /* Timer Styles */
 #timer {
-  font-size: 8rem;
+  font-size: 6rem;
   font-weight: bold;
   color: #514236;
   margin-bottom: 20px;
   text-align: center;
 }
 
-/* Hamburger Icon */
+/* Hamburger Menu */
 .hamburger {
   display: none;
   flex-direction: column;
   justify-content: space-around;
-  width: 30px;
-  height: 25px;
+  width: 35px;
+  height: 30px;
   background: transparent;
   border: none;
   cursor: pointer;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 10; /* Ensure it's above other elements */
 }
 
 .hamburger div {
-  width: 30px;
+  width: 35px;
   height: 5px;
   background-color: #514236;
   border-radius: 5px;
 }
 
-/* Navigation Bar */
+/* Navigation Bar (Initially Hidden) */
 .nav-bar {
   position: absolute;
-  top: 50px; /* Positioning right below the hamburger icon */
+  top: 60px; /* Positioned below the hamburger button */
   left: 50%;
   transform: translateX(-50%);
-  display: flex;
+  display: none;
   flex-direction: column;
-  gap: 10px;
   background-color: #514236;
-  padding: 20px;
+  padding: 15px;
   border-radius: 8px;
-  width: 200px;
-  display: none; /* Hidden by default */
+  width: 80%;
+  max-width: 250px;
+  text-align: center;
+  z-index: 9; /* Ensure it's on top of background */
 }
 
 .nav-bar.show {
-  display: flex; /* Shows the menu when toggled */
+  display: flex; /* Show the menu when toggled */
 }
 
+/* Navigation Buttons */
 .nav-button {
-  background: #514236;
+  background: transparent;
   color: white;
   font-size: 1rem;
-  text-align: center;
   padding: 10px;
   border: none;
   cursor: pointer;
@@ -89,14 +94,11 @@ body, html {
 /* Responsive Styles (Mobile Only) */
 @media (max-width: 768px) {
   .hamburger {
-    display: flex;
-    position: absolute;
-    top: 20px;
-    left: 20px;
+    display: flex; /* Show hamburger menu on mobile */
   }
 
   #timer {
-    font-size: 2.5rem;
+    font-size: 3rem;
     margin-top: 10px;
     text-align: center;
   }
