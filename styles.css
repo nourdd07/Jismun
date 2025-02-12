@@ -36,8 +36,8 @@ body, html {
   display: none;
   flex-direction: column;
   justify-content: space-around;
-  width: 35px;
-  height: 30px;
+  width: 50px;
+  height: 40px;
   background: transparent;
   border: none;
   cursor: pointer;
@@ -48,8 +48,8 @@ body, html {
 }
 
 .hamburger div {
-  width: 35px;
-  height: 5px;
+  width: 50px;
+  height: 6px;
   background-color: #514236;
   border-radius: 5px;
 }
@@ -63,10 +63,10 @@ body, html {
   display: none;
   flex-direction: column;
   background-color: #514236;
-  padding: 15px;
+  padding: 20px;
   border-radius: 8px;
-  width: 80%;
-  max-width: 250px;
+  width: 90%;
+  max-width: 300px;
   text-align: center;
   z-index: 9; /* Ensure it's on top of background */
 }
@@ -77,11 +77,12 @@ body, html {
 
 /* Navigation Buttons */
 .nav-button {
+  font-family: 'Playfair Display', serif;
   background: transparent;
   color: white;
-  font-size: 1rem;
-  padding: 10px;
-  border: none;
+  font-size: 1.5rem;
+  padding: 15px;
+  border: 2px solid white;
   cursor: pointer;
   transition: background 0.3s, color 0.3s;
 }
