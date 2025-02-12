@@ -102,6 +102,10 @@ body, html {
     font-size: 3rem;
     margin-top: 10px;
     text-align: center;
-  } 
-}
+  }
 
+  /* Mobile Background Image */
+  .background {
+    background-image: url('https://i.imgur.com/gBHRuah.jpg');
+  }
+}
