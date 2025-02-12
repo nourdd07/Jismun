@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agendas - JISMUN</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* General Styles */
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: 'Playfair Display', serif;
+      color: #514236;
+    }
+
+    /* Background Image */
+    .background {
+      background-image: url('https://i.imgur.com/iYKDtZj.jpg');
+      background-size: cover;
+      background-position: center;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    /* Committee Buttons */
+    .committee-button {
+      background: none;
+      border: 2px solid #514236;
+      color: #514236;
+      padding: 15px 30px; /* Bigger buttons */
+      font-size: 1.5rem; /* Bigger text */
+      font-family: 'Playfair Display', serif;
+      cursor: pointer;
+      transition: background 0.3s, color 0.3s;
+      margin: 10px;
+      width: 80%; /* Wider buttons */
+      max-width: 400px; /* Limit button width */
+      text-align: center;
+    }
+
+    .committee-button:hover {
+      background: #514236;
+      color: white;
+    }
+
+    /* Responsive Styles */
+    @media (max-width: 768px) {
+      .committee-button {
+        font-size: 1.2rem; /* Smaller buttons for mobile */
+        padding: 10px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="background">
+    <h1>Agendas</h1>
+    <button class="committee-button" onclick="window.location.href='jcc-agenda.html'">JCC</button>
+    <button class="committee-button" onclick="window.location.href='unwomen-agenda.html'">UNWOMEN</button>
+    <button class="committee-button" onclick="window.location.href='hunsc-agenda.html'">HUNSC</button>
+    <button class="committee-button" onclick="window.location.href='legal-agenda.html'">Legal</button>
+    <button class="committee-button" onclick="window.location.href='ecosoc-agenda.html'">ECOSOC</button>
+    <button class="committee-button" onclick="window.location.href='unicef-agenda.html'">UNICEF</button>
+    <button class="committee-button" onclick="window.location.href='ioc-agenda.html'">IOC</button>
+  </div>
+</body>
+</html>
