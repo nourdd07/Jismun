@@ -6,97 +6,6 @@
   <title>Home - JISMUN</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
-  <style>
-    /* General Styles */
-    body, html {
-      margin: 0;
-      padding: 0;
-      height: 100%;
-      font-family: 'Playfair Display', serif;
-      color: #514236;
-    }
-
-    /* Background Image */
-    .background {
-      background-image: url('https://i.imgur.com/2BoM6eo.png');
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      height: 100vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: flex-start;
-      padding-top: 10vh;
-      position: relative;
-    }
-
-    /* Timer Styles */
-    #timer {
-      font-size: 6rem;
-      font-weight: bold;
-      color: #514236;
-      margin-bottom: 20px;
-      text-align: center;
-    }
-
-    /* Mobile Menu Button */
-    .menu-btn {
-      display: block;
-      font-size: 2rem;
-      background: #514236;
-      color: white;
-      border: none;
-      cursor: pointer;
-      padding: 5px 10px;
-      position: absolute;
-      top: 10px;
-      left: 10px;
-      border-radius: 5px;
-      z-index: 1000; /* Ensure it's above other elements */
-    }
-
-    /* Navigation Bar (Updated) */
-    .nav-bar {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      height: 100vh;
-      background: rgba(81, 66, 54, 0.95); /* Dark overlay effect */
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      gap: 15px;
-      padding: 20px;
-      transform: translateY(-100%);
-      transition: transform 0.3s ease-in-out;
-      z-index: 999; /* Ensure it's above other elements */
-    }
-
-    /* Show menu when toggled */
-    .nav-bar.show {
-      transform: translateY(0);
-    }
-
-    /* Navigation Buttons */
-    .nav-button {
-      background: none;
-      color: white;
-      border: 2px solid white;
-      padding: 12px 20px;
-      font-size: 1.2rem;
-      width: 80%;
-      text-align: center;
-      cursor: pointer;
-    }
-
-    .nav-button:hover {
-      background: white;
-      color: #514236;
-    }
-  </style>
 </head>
 <body>
   <div class="background">
@@ -112,7 +21,6 @@
       <button class="nav-button" onclick="window.location.href='role-selection.html'">Apply Now</button>
       <button class="nav-button" onclick="window.location.href='mailto:jismun25@gmail.com'">Contact Us</button>
       <button class="nav-button" onclick="window.location.href='sg-letter.html'">SG Letter</button>
-      
     </div>
 
     <!-- Timer -->
@@ -124,32 +32,6 @@
     &copy; 2025 JISMUN. All rights reserved.
   </footer>
 
-  <script>
-    // Timer Script
-    const countDownDate = new Date("May 9, 2025 00:00:00").getTime();
-
-    const timer = setInterval(() => {
-      const now = new Date().getTime();
-      const distance = countDownDate - now;
-
-      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-      document.getElementById("timer").innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
-
-      if (distance < 0) {
-        clearInterval(timer);
-        document.getElementById("timer").innerHTML = "EVENT STARTED";
-      }
-    }, 1000);
-
-    // Toggle the visibility of the navbar
-    function toggleMenu() {
-      const navBar = document.querySelector(".nav-bar");
-      navBar.classList.toggle("show");
-    }
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
