@@ -1,3 +1,13 @@
+// Smooth scrolling for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+    document.querySelector(this.getAttribute('href')).scrollIntoView({
+      behavior: 'smooth'
+    });
+  });
+});
+
 // Timer Script
 const countDownDate = new Date("May 9, 2025 00:00:00").getTime();
 
@@ -10,7 +20,7 @@ const timer = setInterval(() => {
   const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
   const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-  document.getElementById("timer").innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+  document.getElementById("timer").innerHTML = ${days}d ${hours}h ${minutes}m ${seconds}s;
 
   if (distance < 0) {
     clearInterval(timer);
@@ -20,6 +30,5 @@ const timer = setInterval(() => {
 
 // Toggle the visibility of the navbar
 function toggleMenu() {
-  const navBar = document.querySelector(".nav-bar");
-  navBar.classList.toggle("show");
+  document.querySelector(".nav-bar").classList.toggle("show");
 }
